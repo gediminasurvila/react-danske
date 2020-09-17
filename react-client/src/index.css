@@ -1,0 +1,359 @@
+:root {
+  --dark-blue: #003755;
+}
+
+::selection {
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'dk_text', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #394344;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'dk_headlines', 'Roboto', sans-serif;
+  color: var(--dark-blue);
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'dk_text';
+  src: url('/fonts/dk_text/dk_text-webfont.eot'),
+       url('/fonts/dk_text/dk_text-webfont.woff2') format('woff2'),
+       url('/fonts/dk_text/dk_text-webfont.woff') format('woff'),
+       url('/fonts/dk_text/dk_text-webfont.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dk_headlines';
+  src: url('/fonts/dk_headlines/DanskeHuman-MediumItalic.eot'),
+       url('/fonts/dk_headlines/DanskeHuman-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  width: 100%;
+  max-width: 1207px;
+  padding: 13px;
+  margin: 0 auto;
+  height: 66px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1428px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "photo illustration"
+  "number illustration"
+  ;
+}
+
+#photo {
+  grid-area: photo;
+}
+
+#illustration {
+  grid-area: illustration;
+}
+
+#number {
+  grid-area: number;
+}
+
+
+
+.card {
+  margin: 2px;
+  border-radius: 2px;
+  padding: 50px;
+}
+
+.card-dark {
+  background-color: var(--dark-blue);
+  color: #fff;
+}
+
+.card-sky {
+  background-color: #a2d8e8;
+}
+
+#photo {
+  background: url("/colleagues-working-together-at-office-desk.jpg") no-repeat;
+  background-size: cover;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(18,64,97,.8);
+  transition: opacity .65s cubic-bezier(.39,.575,.565,1);
+}
+
+.modal {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  background: #fff;
+  padding: 50px;
+  position: relative;
+}
+
+.modal-md {
+  max-width: 700px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1em;
+}
+
+
+.styled-input {
+  position: relative;
+}
+
+.styled-input input {
+  background: #FFFFFF;
+    font-size: 16px;
+    vertical-align: middle;
+    border: 1px solid #d0d4d6;
+    max-width: 100%;
+    line-height: 50px;
+    border-radius: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 14px 20px 14px 34px;
+    line-height: 22px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 1em;
+}
+
+.styled-input input:focus {
+  border: 1px solid var(--dark-blue);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #d0d4d6;;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #d0d4d6;
+}
+
+::placeholder {
+  color: #d0d4d6;
+}
+
+.error {
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  background: #fff;
+  color: #cc0000;
+  padding: 6px 20px;
+  border-radius: 1000px;
+  box-shadow: 0 2px 10px rgba(0,0,0, 0.3);
+}
+
+.error::after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  bottom: -9px;
+  left: 20px;
+}
+
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background-color: #009edd;
+  position: relative;
+  transition: .3s all cubic-bezier(.55,.055,.675,.19);
+  border: 1px solid #d0d4d6;
+  vertical-align: bottom;
+  color: #fff;
+  border-color: #37b0de;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.02) 7%,rgba(255,255,255,0) 50%,rgba(255,255,255,.12) 100%);
+}
+
+.button {
+  font-family: 'dk_text', 'Roboto', sans-serif;
+  height: 48px;
+  font-size: 1rem;
+  line-height: 46px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.button-circle {
+  border-radius: 50%;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  line-height: 1.6;
+  border: none;
+  background-color: #009edd;
+  color: #fff;
+}
+
+button:disabled:hover {
+  box-shadow: none;
+}
+
+.button:hover {
+  background-color: #009edc;
+  box-shadow: 0 2px 4px 0 rgba(0,55,85,.4);
+}
+
+.button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  opacity: 1;
+  border-radius: 1000px;
+  background: linear-gradient(to top,rgba(255,255,255,.02),rgba(255,255,255,.065));
+  height: 48px;
+}
+
+/* Transitions - Animations */
+
+.spinning {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+
+.animation {
+  transition: all 0.3s ease-in-out;
+}
+
+.waiting {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.done {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade {
+  opacity: 0;
+}
+
+.done-fade {
+  opacity: 1;
+}
+
+
+/* ------------------  Media Queries ---------------------------- */
+/* Medium screens */
+@media(min-width: 601px) and (max-width: 1200px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "number number"
+    "photo illustration"
+    ;
+  }
+}
+
+
+/* Small screens */
+@media(max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "number"
+    "photo"
+    "illustration"
+    ;
+  }
+}

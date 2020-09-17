@@ -1,0 +1,8 @@
+type Query {
+    request(input: Int): Answer
+}
+
+type Answer {
+    val3: Int
+    val5: Int
+}
