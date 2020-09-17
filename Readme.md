@@ -6,7 +6,7 @@ In all three project directories `rest-api-server`, `graphql-server`, `react-cli
 
 ### `npm install`
 
-## After dependency installation
+## After Installation
 
 Once you have all dependencies install, then you will need to start development servers, please run in each derectory.
 
