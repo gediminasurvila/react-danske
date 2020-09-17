@@ -1,4 +1,4 @@
-This project was bootstrapped with React + GrapQL + REST
+This project was bootstrapped with React + GraphQL + REST API
 
 ## Installation
 
@@ -13,9 +13,9 @@ Once you have all dependencies installed, you will need to start development ser
 ### `npm start`
 
 It will start development server for **REST API**.<br />
-Open [http://localhost:4000](http://localhost:4000) to view it in the browser. There will be 3 enpints available `/person/:input`, `/facility/:val1` and `exposure/:val2`.
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser. There will be 3 endpoints available `/person/:input`, `/facility/:val1` and `exposure/:val2`.
 
-**GraphQL server** will be available at.<br />
+**GraphQL server** will be available at port 5000.<br />
 Open [http://localhost:5000](http://localhost:5000) to play with GraphQL Playground Tool.
 
 **React App** - Front End application will be available at port 3000.<br />
